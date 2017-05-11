@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+            public static int fibonacci(int n)
+            {
+                int a = 0;
+                int b = 1;
+
+                for (int i = 0; i < n; i++)
+                {
+                    int temp_value = a;
+                    a = b;
+                    b = temp_value + b;
+                }
+                return a;
+            }
+
+            static void Main()
+            {
+                for (int i = 1; i < 6; i++)
+                // value starting at 1
+                {
+                    if (i < 0)
+                    {
+                        // validation for negative input 
+                        Console.WriteLine("please enter a valid value");
+                        break;
+
+                    }
+                    else
+                    {
+
+                        Console.WriteLine(fibonacci(i));
+                        //Display output
+                    }
+
+                }
+
+                Console.ReadLine();
+                // read output to console
+            }
+        }
+}
+
